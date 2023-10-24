@@ -1,0 +1,22 @@
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        div,
+        button {
+            margin: 3rem
+        }
+
+        .center {
+            margin: auto;
+            width: 75%;
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        body {
+            background-color: burlywood;
+        }
