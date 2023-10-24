@@ -1,22 +1,21 @@
+table,
+th,
+td {
+    border: 1px solid black;
+}
 
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
+div,
+button {
+    margin: 3rem
+}
 
-        div,
-        button {
-            margin: 3rem
-        }
+.center {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    background-color: bisque;
+}
 
-        .center {
-            margin: auto;
-            width: 75%;
-            padding: 10px;
-            background-color: bisque;
-        }
-
-        body {
-            background-color: burlywood;
-        }
+body {
+    background-color: burlywood;
+}
