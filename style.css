@@ -19,3 +19,22 @@ button {
 body {
     background-color: burlywood;
 }
+.inline {
+    display: inline-block;
+    width: 20rem;
+}
+
+img {
+    margin: 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+img:hover {
+    box-shadow: 0.2rem 0.3rem 0.3rem gray;
+}
+
+h1 {
+    transition: 0.3s ease-out; 
+}
+h1:hover {
+    text-shadow: 5px 2px 3px gray;
+}
