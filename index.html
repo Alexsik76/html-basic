@@ -8,55 +8,51 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
   </head>
   <body class="body">
-    <header class="header">
-      <nav class="nav nav--row">
-        <div class="nav--row nav__group nav__group--left">
-          <div class="nav__group main-logo">
-            <img
-              class="image main-logo"
-              src="./img/kpi-logo.png"
-              alt="KPI logo"
-            />
-          </div>
-          <div class="nav__group nav-item">
-            <a href="#">WEB</a>
-          </div>
-          <div class="nav__group nav-item">
-            <a href="#">DB</a>
-          </div>
-          <div class="nav__group nav-item">
-            <a href="#">C++</a>
-          </div>
-        </div>
-        <div class="nav--row nav__group nav__group--right">
-          <div class="nav__group nav-item">
-            <a href="#">Help</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section class="section section--title">
-      <div class="title title__item">
-        <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
-        <h2>
-          З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"
-        </h2>
+    <header class="header header--bordered">
+      <div class="header__logo">
+        <img
+          class="image main-logo"
+          src="./img/kpi-logo-green.png"
+          alt="KPI logo"
+        />
       </div>
-      <div class="title title__item">
-        <div>
+      <section class="header__title title">
+        <div class="title__name">
+          <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+        </div>
+        <div class="title__subject">
+          <h2>
+            З ДИСЦИПЛІНИ "ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ"
+          </h2>
+        </div>
+        <div class="title title__student">
           <h3>Студента групи зпі-зп31 Сікорського Олександра Степановича</h3>
         </div>
-        <div class="image image--floating">
-          <img
-            class="image student-photo"
-            src="./img/IMG_2747.jpg"
-            alt="My photo"
-          />
-        </div>
+      </section>
+      <div class="header__photo">
+        <img class="image student-photo" src="./img/IMG_2747.jpg" alt="My photo" />
       </div>
+    </header>
+    <section class="nav nav--row nav--bordered">
+      <div class="nav-item">
+        <button class="button" type="button">Лаба №1</button>
+      </div>
+      <div class="nav-item">
+        <button class="button" type="button">Лаба №2</button>
+      </div>
+      <div class="nav-item">
+        <button class="button" type="button">Лаба №3</button>
+      </div>
+      <div class="nav-item">
+        <button class="button" type="button">Лаба №4</button>
+      </div>
+      <div class="nav-item">
+        <button class="button" type="button">Лаба №5</button>
+      </div>
+
     </section>
     <main class="main">
-      <aside class="aside-left nav nav--coll">
+      <aside class="aside-left nav nav--coll nav--bordered">
         <div class="nav-item">
           <button class="button" type="button">
             Опис предметного середовища
@@ -83,19 +79,17 @@
           <button class="button" type="button">Висновки</button>
         </div>
       </aside>
-      <section class="main-content">
-        <object
+      <section id="inserted" class="main-content main-content--bordered">
+        <!-- <object
           data="./html/lab/lab_1/subject_description.html"
           type="text/html"
           title="Main data"
-        ></object>
+        ></object> -->
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer footer--bordered">
       <div>2023</div>
-      <div>
-        <a href="mailto:o.sikorskyi.vn.@gmail.com">Send Email</a>
-      </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
