@@ -74,10 +74,12 @@ h1, h2, h3{
 }
 .main p{
     text-align: justify;
+    font-size: large;
 }
 .main h2,
 .main h3{
     padding: 0.5em;
+    font-size: large;
 
 }
 .aside-left{
@@ -95,8 +97,4 @@ h1, h2, h3{
     color: inherit;
     height: 100%;
     width: 100%;
-}
-object{
-    width: 100%;
-    height: 55vh;
 }
