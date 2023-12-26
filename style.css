@@ -10,6 +10,16 @@
 h1, h2, h3{
     padding: 0.2em 0;
 }
+a{
+    border-bottom: 1px dotted;
+}
+
+.header__help-button span{
+    color: #40513B;
+    font-size: 48px;
+    background-color: #EDF1D6;
+}
+
 .header{
     min-height:5em;
     font-size: large;
@@ -33,6 +43,7 @@ h1, h2, h3{
 }
 .title__student span{
     cursor: pointer;
+    border-bottom: 1px dotted;
 }
 .title__student .tooltip {
 	visibility: hidden;

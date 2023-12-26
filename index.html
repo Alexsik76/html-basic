@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link id="included_css" rel="stylesheet" type="text/css" href="" />
+    <link id="extra_css" rel="stylesheet" type="text/css" href="" />
     <title>HTML Basic</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
   </head>
   <body class="body">
     <header class="header header--bordered">
@@ -40,7 +42,8 @@
           </div>
         </div>
       </section>
-      <div class="header__help-button">?</div>
+      <!-- <div class="header__help-button"><iconify-icon icon="material-symbols:help-outline" width="48"></iconify-icon></div> -->
+      <button type="button" id="help_button"class="header__help-button"><span class="material-symbols-outlined">help</span></button>
     </header>
     <section class="nav nav--row nav--bordered">
       <div class="nav-item">
@@ -99,5 +102,6 @@
       <div>2023</div>
     </footer>
     <script src="./main.js"></script>
+    <!-- <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> -->
   </body>
 </html>
