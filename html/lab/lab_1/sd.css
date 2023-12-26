@@ -1,11 +1,9 @@
 #included {
-    p{
+    p {
         text-align: justify;
     }
     h2, h3 {
         padding: 1em 0;
         font-weight: 700;
     }
-
-    
 }
