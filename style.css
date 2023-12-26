@@ -70,22 +70,14 @@ h1, h2, h3{
     display: flex;
     justify-content: start;
     align-items: start;
-    font-size: small;
-}
-.main p{
-    text-align: justify;
-}
-.main h2,
-.main h3{
-    padding: 0.5em;
-
+   
 }
 .aside-left{
-    width: 20%;
+    width: 30%;
     padding: 1em;
 }
 .main-content{
-    flex: 1 1 auto;
+    width: 70%;
     min-height: 97%;
     padding: 1em 2em;
 }
