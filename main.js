@@ -18,5 +18,5 @@ help_button.addEventListener("click", helpHandler);
 async function helpHandler(){
   let HTML_file = "./html/help/help.html";
   let CSS_file = "./html/help/help.css";
-  insertBlock(HTML_file, CSS_file);
+  await insertBlock(HTML_file, CSS_file);
 };
