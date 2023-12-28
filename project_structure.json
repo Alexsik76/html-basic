@@ -1,0 +1,12 @@
+{
+    "data":{
+        "labs": [
+            {"name": "lb1", "title": "Лаба1", "rel_path": "./html/lab/lab_1/"},
+            {"name": "lb2", "title": "Лаба2", "rel_path": "./html/lab/lab_2/"},
+            {"name": "lb3", "title": "Лаба3", "rel_path": "./html/lab/lab_3/"},
+            {"name": "lb4", "title": "Лаба4", "rel_path": "./html/lab/lab_4/"},
+            {"name": "lb5", "title": "Лаба5", "rel_path": "./html/lab/lab_5/"}
+        ]
+    }
+    
+}
