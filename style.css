@@ -66,6 +66,9 @@ a{
     background-color: #EDF1D6;
 
 }
+.header__help-button{
+    background-color: #EDF1D6;
+}
 
 .header{
     min-height:5em;
