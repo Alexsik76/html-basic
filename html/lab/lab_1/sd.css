@@ -1,12 +1,14 @@
-main.main {
+#inserted {
     p {
         text-align: justify;
     }
-    h2, h3 {
+    h2,
+    h3 {
         padding: 1em 0;
         font-weight: 700;
     }
     li {
         padding-bottom: 0.5em;
+        text-align: justify;
     }
 }
