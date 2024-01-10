@@ -1,12 +1,63 @@
 {
-    "data":{
-        "labs": [
-            {"name": "lb1", "title": "Лаба1", "rel_path": "./html/lab/lab_1/"},
-            {"name": "lb2", "title": "Лаба2", "rel_path": "./html/lab/lab_2/"},
-            {"name": "lb3", "title": "Лаба3", "rel_path": "./html/lab/lab_3/"},
-            {"name": "lb4", "title": "Лаба4", "rel_path": "./html/lab/lab_4/"},
-            {"name": "lb5", "title": "Лаба5", "rel_path": "./html/lab/lab_5/"}
-        ]
+    "data": {
+        "labs": {
+            "lb1": {
+                "title": "Лаба1",
+                "rel_path": "./html/lab/lab_1/",
+                "buttons": {
+                    "sd_btn": {
+                        "title": "Опис предметного середовища",
+                        "html_file": "sd.html",
+                        "css_file": "sd.css"
+                    },
+                    "topic_btn": {
+                        "title": "Тема, мета місце розташування лаби №1",
+                        "html_file": "topic.html",
+                        "css_file": "topic.css"
+                    },
+                    "structure_btn": {
+                        "title": "Структура документа",
+                        "html_file": "structure.html",
+                        "css_file": "structure.css"
+                    },
+                    "tables_btn": {
+                        "title": "Таблиці",
+                        "html_file": "tables.html",
+                        "css_file": "tables.css"
+                    },
+                    "forms_btn": {
+                        "title": "Форми",
+                        "html_file": "forms.html",
+                        "css_file": "forms.css"
+                    },
+                    "imgs_btn": {
+                        "title": "Зображення",
+                        "html_file": "imgs.html",
+                        "css_file": "imgs.css"
+                    },
+                    "conclusion_btn": {
+                        "title": "Висновки",
+                        "html_file": "conclusion.html",
+                        "css_file": "conclusion.css"
+                    }
+                }
+            },
+            "lb2": {
+                "title": "Лаба2",
+                "rel_path": "./html/lab/lab_2/"
+            },
+            "lb3": {
+                "title": "Лаба3",
+                "rel_path": "./html/lab/lab_3/"
+            },
+            "lb4": {
+                "title": "Лаба4",
+                "rel_path": "./html/lab/lab_4/"
+            },
+            "lb5": {
+                "title": "Лаба5",
+                "rel_path": "./html/lab/lab_5/"
+            }
+        }
     }
-    
 }

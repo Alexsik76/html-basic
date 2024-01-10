@@ -29,39 +29,40 @@ aside {
 	display: block;
 }
 
+
 html,
 body {
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 18px;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 18px;
 }
 
 button {
-	cursor: pointer;
+    cursor: pointer;
+    border: none;
 }
-
 button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+    padding: 0;
+    border: 0;
 }
 
 a,
 a:visited {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 ul li {
-	list-style: none;
+    list-style: none;
 }
 
 img {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -70,9 +71,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-size: inherit;
-	font-weight: 400;
+    font-size: inherit;
+    font-weight: 400;
+    margin: 0;
 }
-a{
-	color: inherit;
+a {
+    color: inherit;
 }

@@ -1,53 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/montserrat");
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 18px;
-    margin: 0;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: 400;
-    margin: 0;
-}
-a {
-    color: inherit;
-}
+@import url("./clean_style.css");
 .body {
     background-color: #edf1d6;
     font-family: "Montserrat";
@@ -136,11 +88,16 @@ a {
     justify-content: center;
 }
 .nav-item {
-    background-color: #9dc08b;
+    background-color: #edf1d6;
     padding: 0.3em;
+    border: 1px solid #9dc08b;
     border-radius: 5px;
     margin: 0.5em 0.3em;
     flex: 1 1 auto;
+}
+
+.nav-item.active {
+    background-color: #9dc08b;
 }
 
 .main {
@@ -152,14 +109,13 @@ a {
 }
 .aside-left {
     padding: 1em;
-    
- 
 }
 .main-content {
     flex: 1 1 60%;
     height: 92%;
     overflow-y: auto;
     padding: 1em 2em;
+    text-align: center;
 }
 .button {
     background-color: inherit;
