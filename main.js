@@ -83,6 +83,7 @@ async function acideButtonHandler(event) {
   }
   current_accide_btn = event.target;
   current_accide_btn.parentElement.classList.add("active");
+  PR.prettyPrint();
 }
 async function helpHandler() {
   let HTML_file = "./html/help/help.html";

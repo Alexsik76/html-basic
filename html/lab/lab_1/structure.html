@@ -21,7 +21,7 @@
       }
     function lbButtonHandler(event) {
     current_lb = site_data.labs[event.target.id];
-    setCurrentBtnActive((new_btn = event.target));
+    setCurrentBtnActive(new_btn = event.target);
     for (button in current_lb.buttons) {
         createAcideButton(button, current_lb.buttons[button]);
     }
