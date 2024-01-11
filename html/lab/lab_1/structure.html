@@ -1,0 +1,37 @@
+<body>
+    <section class="inserted__title">
+        <h2>Структура проекту:</h2>
+    </section>
+    <section class="inserted__content">
+        <p>
+             Проект складається зі статичного <code>index.html</code> файлу, основного файлу стилів <code>style.css</code> та файлу скриптів мовою JavaScript <code>main.js</code>.
+             На стадії початкового завантаження сторінки лівий блок кнопок <code>&lt;aside
+                id="accide_buttons"class="aside-left nav nav--coll"&gt;</code> - порожній. Так само не завантажується вміст секції <code>&lt;section
+                id="inserted" class="main-content"&gt;</code>
+            Наприкінці завантаження статичного контенту, завантажується js скрипт, який починає виконуватись:
+            <ul>
+                <li> - завантажуються данні про структуру проекту з файлу <code>project_structure.json</code>. Цей файл містить відомості про кнопки лівої панелі для кожної 
+                    лабораторної роботи з їх написами та назвою файлів html та css, що відповідають кожній кнопці.</li>
+                <li> - кнопкам вибору лаборатрної роботи присвоюється обробник події натискання:</li>
+<pre class="prettyprint lang-js">
+    for (button of all_buttons) {
+        if (button.id.startsWith("lb")) {
+          button.addEventListener("click", lbButtonHandler);
+        }
+      }
+    function lbButtonHandler(event) {
+    current_lb = site_data.labs[event.target.id];
+    setCurrentBtnActive((new_btn = event.target));
+    for (button in current_lb.buttons) {
+        createAcideButton(button, current_lb.buttons[button]);
+    }
+        ...
+    }
+</pre>    
+                <li>- динамаічно генерується html-код кожної кнопки </li>
+                <li>- відбувається завантаження вмісту основного блоку </li>    
+            </ul>
+        </p> 
+    </section>
+   
+</body>
