@@ -3,17 +3,19 @@ const destinationHTML = document.getElementById("inserted");
 const extraCssLink = document.getElementById("extra_css");
 
 const fadeIn = [{ opacity: 0 }, { opacity: 1 }];
-const timing = { duration: 800, iterations: 1 };
+const animateButton = [
+  { backgroundColor: "#9dc08b" },
+  { backgroundColor: "#edf1d6" },
+];
+const timing = { duration: 400, iterations: 1 };
 const help_button = document.getElementById("help_button");
 
 let site_data = getSiteData();
-let current_lb_btn = document.getElementById("lb1");
-current_lb_btn.parentElement.classList.add("active");
 let current_lb = {};
+let current_lb_btn = null;
 let current_accide_btn = null;
 help_button.addEventListener("click", helpHandler);
 helpHandler();
-
 
 async function insertBlock(sourceHTML, linkCSS = "") {
   let myObject = await fetch(sourceHTML);
@@ -33,23 +35,25 @@ async function getSiteData(source = "/project_structure.json") {
 }
 
 for (button of document.querySelectorAll("button[id^='lb']")) {
-    button.addEventListener("click", lbButtonHandler);
+  button.addEventListener("click", lbButtonHandler);
 }
 
-function setCurrentBtnActive(new_btn) {
-  current_lb_btn.parentElement.classList.remove("active");
+function setCurrentBtnActive(old_button, new_btn) {
+  if (old_button) {
+    old_button.parentElement.classList.remove("active");
+    old_button.parentElement.animate(animateButton, timing);
+  }
   new_btn.parentElement.classList.add("active");
-  current_lb_btn = new_btn;
-  accideButtonsBlock.innerHTML = "";
-  destinationHTML.innerHTML = "";
-  extraCssLink.href = "";
 }
 
 function lbButtonHandler(event) {
   current_lb = site_data.labs[event.target.id];
-  setCurrentBtnActive((new_btn = event.target));
+  setCurrentBtnActive(current_lb_btn, event.target);
+  current_lb_btn = event.target;
+  accideButtonsBlock.innerHTML = "";
+  extraCssLink.href = "";
   for (button in current_lb.buttons) {
-    createAcideButton(button, current_lb.buttons[button]);
+    createAcideButton(button);
   }
   if (accideButtonsBlock.firstChild) {
     accideButtonsBlock.style.display = "block";
@@ -60,8 +64,9 @@ function lbButtonHandler(event) {
   }
 }
 
-function createAcideButton(button_name, button_data) {
+function createAcideButton(button_name) {
   let div_button = document.createElement("div");
+  let button_data = current_lb.buttons[button_name];
   div_button.classList.add("nav-item");
   let button = `<button id=${button_name} class="button" type="button"> ${button_data.title}</button>`;
   div_button.innerHTML = button;
@@ -77,9 +82,7 @@ function createAcideButton(button_name, button_data) {
 
 async function acideButtonHandler(event) {
   await insertBlock(this.html_file, this.css_file);
-  if (current_accide_btn) {
-    current_accide_btn.parentElement.classList.remove("active");
-  }
+  setCurrentBtnActive(current_accide_btn, event.target);
   current_accide_btn = event.target;
   current_accide_btn.parentElement.classList.add("active");
   PR.prettyPrint();
@@ -87,7 +90,6 @@ async function acideButtonHandler(event) {
 async function helpHandler() {
   let HTML_file = "./html/help/help.html";
   let CSS_file = "./html/help/help.css";
-  accideButtonsBlock.innerHTML = "";
   accideButtonsBlock.style.display = "none";
   if (current_lb_btn) {
     current_lb_btn.parentElement.classList.remove("active");
