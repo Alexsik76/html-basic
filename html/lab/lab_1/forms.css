@@ -1,0 +1,27 @@
+.inserted__title{
+    padding-bottom: 1%;
+}
+.inserted__content{
+    text-align: left;
+    line-height: 1.5;
+    p, ul{
+        padding-bottom: 1%;
+    }
+    .demo__button {
+        font-size: inherit;
+        margin-left: 1%;
+        border: 1px solid #9dc08b;
+        width: 10em;
+    }
+    .demo__checkbox {
+        font-size: inherit;
+        margin-left: 1%;
+    }
+    .demo__label{
+        font-size: inherit;
+        margin-left: 1%;
+        line-height: 1;
+    
+    }
+   
+}

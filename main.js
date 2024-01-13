@@ -2,6 +2,8 @@ const accideButtonsBlock = document.getElementById("accide_buttons");
 const destinationHTML = document.getElementById("inserted");
 const extraCssLink = document.getElementById("extra_css");
 
+const fadeIn = [{ opacity: 0 }, { opacity: 1 }];
+const timing = { duration: 800, iterations: 1 };
 const help_button = document.getElementById("help_button");
 
 let site_data = getSiteData();
@@ -12,14 +14,13 @@ let current_accide_btn = null;
 help_button.addEventListener("click", helpHandler);
 helpHandler();
 
-const all_buttons = document.getElementsByTagName("button");
 
-async function insertBlock(sourceHTML, sourceCSS = "") {
+async function insertBlock(sourceHTML, linkCSS = "") {
   let myObject = await fetch(sourceHTML);
   if (myObject.status == 200) {
-    let myText = await myObject.text();
-    destinationHTML.innerHTML = myText;
-    extraCssLink.href = sourceCSS;
+    destinationHTML.innerHTML = await myObject.text();
+    extraCssLink.href = linkCSS;
+    destinationHTML.animate(fadeIn, timing);
   } else {
     destinationHTML.innerHTML = `<p>${myObject.statusText}</p> <br><p>Coming soon...</p>`;
     extraCssLink.href = "";
@@ -31,10 +32,8 @@ async function getSiteData(source = "/project_structure.json") {
   site_data = data;
 }
 
-for (button of all_buttons) {
-  if (button.id.startsWith("lb")) {
+for (button of document.querySelectorAll("button[id^='lb']")) {
     button.addEventListener("click", lbButtonHandler);
-  }
 }
 
 function setCurrentBtnActive(new_btn) {
