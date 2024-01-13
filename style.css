@@ -96,22 +96,6 @@ h3 {
     flex-direction: column;
 }
 
-@keyframes out-button {
-    from {
-        background-color: #9dc08b;
-    }
-    to {
-        background-color: #edf1d6;
-    }
-}
-@keyframes in-button {
-    from {
-        background-color: #edf1d6;
-    }
-    to {
-        background-color: #9dc08b;
-    }
-}
 .nav-item {
     background-color: #edf1d6;
     border: 1px solid #9dc08b;
@@ -125,8 +109,6 @@ h3 {
 
 .nav-item.active {
     background-color: #9dc08b;
-    animation: out-button 0.3s ease-out;
-    animation: in-button 0.3s ease-in;
 }
 
 .aside-left {
