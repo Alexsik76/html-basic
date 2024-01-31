@@ -7,4 +7,8 @@
 .inserted__content {
     padding-top: 3%;
     text-align: justify;
+    p {
+        padding: 0.5em;
+    }
+   
 }

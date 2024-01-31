@@ -1,0 +1,37 @@
+<body>
+  <section class="inserted__title">
+    <h2>Стильове оформлення текстових елементів, зокрема списків.</h2>
+  </section>
+  <section class="inserted__content">
+    <p>Списки бувають нумеровані <code>&lt;ol&gt;</code>та не нумеровані  <code>&lt;ul&gt;</code></p>
+    У обох випадках список має містити хоча б один елемент <code>&lt;li&gt;</code>. 
+    При потребі розмітисти вкладений список, він має бути всередені відповідного тегу <code>&lt;li&gt;</code>, а не між ними. 
+    <p>Для списків існують спеціальні властивості:</p>
+    <ul>
+      <li><code>list-style-image</code> - картинка перед кожним елементом списку;</li>
+      <li><code>list-style-position</code> - розташування маркерів в межах границь списку або поза ними;</li>
+      <li><code>list-style-type</code> - тип маркера (наприклад, для нумерованих списків тип <code>lower-roman</code>  встновить нумерацію римськими цифрами). </li>
+    </ul>
+    <p>Ці властивості можуть бути об'єднані скороченим записом: <code>list-style: lower-roman url("img/shape.png") outside;</code></p>
+    <p>Код для списку више:</p>
+    <pre class="prettyprint">
+      li {
+        list-style-type: "* ----------------> ";
+        list-style-position: inside;
+    }
+    </pre>
+    <p>Нумерований список для прикладу:</p>
+    <ol>
+      <li>Сципіон</li>
+      <li>Гай Юлій Цезар</li>
+      <li>Тіберій</li>
+      <li>Нерон</li>
+    </ol>
+    <p>Використано код:</p>
+    <pre class="prettyprint">
+      ol li {
+        list-style-type: lower-roman;
+    }
+    </pre>
+  </section>
+</body>
