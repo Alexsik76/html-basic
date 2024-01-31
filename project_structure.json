@@ -81,7 +81,24 @@
             },
             "lb3": {
                 "title": "Лаба3",
-                "rel_path": "./html/lab/lab_3/"
+                "rel_path": "./html/lab/lab_3/",
+                "buttons": {
+                    "topic_btn": {
+                        "title": "Тема, мета місце розташування лаби №3",
+                        "html_file": "topic.html",
+                        "css_file": "topic.css"
+                    },
+                    "3_sd": {
+                        "title": "ПОСТАНОВКА ЗАДАЧІ лабораторної роботи №3",
+                        "html_file": "sd.html",
+                        "css_file": "sd.css"
+                    },
+                    "3_my_site": {
+                        "title": "Власний сайт",
+                        "html_file": "my_site.html",
+                        "css_file": "my_site.css"
+                    }
+                }
             },
             "lb4": {
                 "title": "Лаба4",
