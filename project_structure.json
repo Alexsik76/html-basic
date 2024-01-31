@@ -44,7 +44,20 @@
             },
             "lb2": {
                 "title": "Лаба2",
-                "rel_path": "./html/lab/lab_2/"
+                "rel_path": "./html/lab/lab_2/",
+                "buttons": {
+                    "sd_btn": {
+                        "title": "СSS",
+                        "html_file": "sd.html",
+                        "css_file": "sd.css"
+                    },
+                    "topic_btn": {
+                        "title": "Тема, мета місце розташування лаби №2",
+                        "html_file": "topic.html",
+                        "css_file": "topic.css"
+                    }
+                }
+                
             },
             "lb3": {
                 "title": "Лаба3",
