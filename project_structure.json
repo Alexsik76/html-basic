@@ -46,15 +46,35 @@
                 "title": "Лаба2",
                 "rel_path": "./html/lab/lab_2/",
                 "buttons": {
-                    "sd_btn": {
-                        "title": "СSS",
-                        "html_file": "sd.html",
-                        "css_file": "sd.css"
-                    },
                     "topic_btn": {
                         "title": "Тема, мета місце розташування лаби №2",
                         "html_file": "topic.html",
                         "css_file": "topic.css"
+                    },
+                    "sd_btn": {
+                        "title": "ПОСТАНОВКА ЗАДАЧІ лабораторної роботи №2",
+                        "html_file": "sd.html",
+                        "css_file": "sd.css"
+                    },
+                    "2_tag_selector": {
+                        "title": "Селектор тегу",
+                        "html_file": "tag_selector.html",
+                        "css_file": "tag_selector.css"
+                    },
+                    "2_id_selector": {
+                        "title": "Ідентифікатори",
+                        "html_file": "id_selector.html",
+                        "css_file": "id_selector.css"
+                    },
+                    "2_other_selectors": {
+                        "title": "Інші селектори",
+                        "html_file": "other_selectors.html",
+                        "css_file": "other_selectors.css"
+                    },
+                    "2_text_elements": {
+                        "title": "Стилізація текстових елементів",
+                        "html_file": "text_elements.html",
+                        "css_file": "text_elements.css"
                     }
                 }
                 
