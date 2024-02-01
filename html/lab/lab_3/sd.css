@@ -5,11 +5,7 @@
 }
 
 .inserted__content {
-    p {
-        text-align: justify;
-    }
-    
-
+   
     li {
         display: list-item;
         padding: 0.5em 2em;

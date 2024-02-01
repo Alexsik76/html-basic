@@ -102,12 +102,31 @@
             },
             "lb4": {
                 "title": "Лаба4",
-                "rel_path": "./html/lab/lab_4/"
-            },
-            "lb5": {
-                "title": "Лаба5",
-                "rel_path": "./html/lab/lab_5/"
+                "rel_path": "./html/lab/lab_4/",
+                "buttons": {
+                    "topic_btn": {
+                        "title": "Тема, мета місце розташування лаби №4",
+                        "html_file": "topic.html",
+                        "css_file": "topic.css"
+                    },
+                    "4_sd": {
+                        "title": "ПОСТАНОВКА ЗАДАЧІ лабораторної роботи №4",
+                        "html_file": "sd.html",
+                        "css_file": "sd.css"
+                    },
+                    "4_arrays": {
+                        "title": "Робота з масивами",
+                        "html_file": "task_1.html",
+                        "css_file": "task_1.css"
+                    },
+                    "4_graph": {
+                        "title": "Побудова графіку",
+                        "html_file": "task_2.html",
+                        "css_file": "task_2.css"
+                    }
+                }
             }
+            
         }
     }
 }

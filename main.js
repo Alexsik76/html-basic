@@ -24,7 +24,7 @@ async function insertBlock(sourceHTML, linkCSS = "") {
     extraCssLink.href = linkCSS;
     destinationHTML.animate(fadeIn, timing);
   } else {
-    destinationHTML.innerHTML = `<p>${myObject.statusText}</p> <br><p>Coming soon...</p>`;
+    destinationHTML.innerHTML = `<p class="loading">${myObject.statusText}</p> <br><p class="loading">Coming soon....</p>`;
     extraCssLink.href = "";
   }
 }
@@ -59,7 +59,7 @@ function lbButtonHandler(event) {
     accideButtonsBlock.style.display = "block";
     accideButtonsBlock.firstChild.firstChild.click();
   } else {
-    destinationHTML.innerHTML = "<p>Coming soon...</p>";
+    destinationHTML.innerHTML = '<p class="loading">Coming soon...</p>';
     accideButtonsBlock.style.display = "none";
   }
 }
