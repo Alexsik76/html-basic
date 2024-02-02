@@ -2,15 +2,18 @@ const accideButtonsBlock = document.getElementById("accide_buttons"); // виб�
 const destinationHTML = document.getElementById("inserted"); // вибір блоку для вставки основного контенту
 const extraCssLink = document.getElementById("extra_css"); // вибір елемента, у який буде додаватись додатковий CSS файл для стилізації вкладених блоків
 
-const fadeIn = [{ opacity: 0 }, { opacity: 1 }];    // константи для анімації
-const animateButton = [                             //
-{ backgroundColor: "#9dc08b" },                   //
-{ backgroundColor: "#edf1d6" },                   //
-];                                                  //
-const timing = { duration: 400, iterations: 1 };    //
+const fadeIn = [{ opacity: 0}, { opacity: 0.33 },{ opacity: 0.66 }, { opacity: 1}];    // константи для анімації
+const animateButton = [                                                                  //
+{ backgroundColor: "#9dc08b" },                                                          //
+{ backgroundColor: "#edf1d6" },                                                          //
+];                                                                                       //
+const timing = { duration: 300, iterations: 1 };                                         //
 
 const help_button = document.getElementById("help_button"); // вибір кнопки допомоги (вгорі справа зі знаком питання)
-
+let site_data = getSiteData(); // отримання основних даних про структуру сайту з файлу project_structure.json
+let current_lb = {};           // для поточної лаби створюється об'єкт, який буде зберігати дані з site_data. Щоб кожного разу для пошуку файлу html, не доводилось з'ясовувати, яка відкрита лаба 
+let current_lb_btn = null; // зберігає поточну кнопку лаби
+let current_accide_btn = null; // зберігає поточну кнопку розділу лаби
 async function helpHandler() {
   /* 
   функція "слухач" або обробник події для кнопки допомоги. В цілому, вона схожа на обробники для інших кнопок, 
@@ -27,10 +30,7 @@ async function helpHandler() {
 help_button.addEventListener("click", helpHandler); // додавання слухача кнопці допомоги
 helpHandler();                                      // під час першого завантаження, щоб не було порожньої сторінки, завантажується допомога
 
-let site_data = getSiteData(); // отримання основних даних про структуру сайту з файлу project_structure.json
-let current_lb = {};           // для поточної лаби створюється об'єкт, який буде зберігати дані з site_data. Щоб кожного разу для пошуку файлу html, не доводилось з'ясовувати, яка відкрита лаба 
-let current_lb_btn = null; // зберігає поточну кнопку лаби
-let current_accide_btn = null; // зберігає поточну кнопку розділу лаби
+
 
 async function insertBlock(sourceHTML, linkCSS = "") {
   /* 
@@ -41,8 +41,8 @@ async function insertBlock(sourceHTML, linkCSS = "") {
   let myObject = await fetch(sourceHTML);
   if (myObject.status == 200) {
     destinationHTML.innerHTML = await myObject.text();
-    extraCssLink.href = linkCSS;
     destinationHTML.animate(fadeIn, timing);
+    extraCssLink.href = linkCSS;
   } else {
     destinationHTML.innerHTML = `<p class="loading">${myObject.statusText}</p> <br><p class="loading">Coming soon....</p>`;
     extraCssLink.href = "";
@@ -69,8 +69,8 @@ function setCurrentBtnActive(old_button, new_btn) {
     попередня кнопка перестає бути активною, із застосуванням ефектів анімації обирається нова активна кнопка 
     parentElement - батьківський елемент. Початково розмістив кнопки в дівах, які легше стилізувати
     */ 
-    old_button.parentElement.classList.remove("active");
-    old_button.parentElement.animate(animateButton, timing);
+   old_button.parentElement.animate(animateButton, timing);
+   old_button.parentElement.classList.remove("active");
   }
   new_btn.parentElement.classList.add("active");
 }
