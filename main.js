@@ -48,7 +48,7 @@ async function insertBlock(sourceHTML, linkCSS = "") {
     extraCssLink.href = "";
   }
 }
-async function getSiteData(source = "/project_structure.json") {
+async function getSiteData(source = "./project_structure.json") {
   /* 
   функція, яка отримує дані сайту з файлу project_structure.json 
   в JS це єдиний спосіб отримати дані з файлу. Цей метод асинхронний - він повертає не дані, а promise (обіцянку),
